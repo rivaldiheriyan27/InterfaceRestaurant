@@ -17,9 +17,9 @@ import {foodsMenu,resetState} from "./slice"
 import Card from "./Card/Card"
 
 
-export default function FoodList({navigation, route}){
+export default function FoodList({navigation}){
     const dispatch = useDispatch()
-    const { id, value } = route.params
+    // const { id, value } = route.params
 
     const foodPackagelist = useSelector(state => state.foodsPackage)
     const {foodsPackage} = foodPackagelist
@@ -75,7 +75,7 @@ export default function FoodList({navigation, route}){
                     <View style={{
                         height:800,
                         width:'100%',                
-                        marginTop:"10",
+                        marginTop:10,
                         flexDirection:"column",
                         }}>
                             <FlatList
@@ -86,7 +86,7 @@ export default function FoodList({navigation, route}){
                                 // alwaysBounceVertical={true}
                             keyExtractor={item => item.id}
                             style={{
-                            marginTop:"20",
+                            marginTop:10,
                             }}
                             />
                        
