@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useFocusEffect } from '@react-navigation/core'
 import {
-    FlatList,
+  FlatList,
   Image,
   SafeAreaView,
   ScrollView,
@@ -11,8 +11,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
+import { unwrapResult } from '@reduxjs/toolkit'
+import { useDispatch, useSelector } from 'react-redux'
 
-export default function DetailPaket() {
+export default function DetailPaket({navigation, route}) {
+    const dispatch = useDispatch()
+    const { id, value } = route.params
+
     return(
         <>
             

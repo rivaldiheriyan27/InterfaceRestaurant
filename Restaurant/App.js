@@ -11,7 +11,8 @@ import React, { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import {store} from './app/store'
 import WelcomeScreen from './screens/welcomeScreens';
-import FoodList from './screens/FoodList/FoodList';
+import FoodList from './screens/FoodList';
+import DetailPaket from "./screens/DetailPaket"
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
         }}>
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
             <Stack.Screen name='FoodList' component={FoodList} />
+            <Stack.Screen name='DetailPaket' component={DetailPaket} />
             {/* <Stack.Screen
                 name="TabNavigator"
                 component={TabNavigator}
